@@ -1,0 +1,24 @@
+<h1>Students</h1>
+
+
+
+<p *ngIf="!students"><em>Loading...</em></p>
+
+<table class='table' *ngIf="students">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{ student.id }}</td>
+            <td>{{ student.firstName }}</td>
+            <td>{{ student.lastName }}</td>
+           
+        </tr>
+    </tbody>
+</table>
